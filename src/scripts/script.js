@@ -51,8 +51,9 @@ faders.forEach(fader => {
 });
 
 
+
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     setTimeout(() => {
         document.querySelector('.hero-content').classList.add('appear');
     }, 100);
