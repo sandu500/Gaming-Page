@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Validation
+      run: |
+        echo "Validating project structure..."
+        test -f src/index.html
+        test -f src/styles/style.css
+        test -f src/scripts/script.js
