@@ -21,3 +21,7 @@ This project is optimized for Vercel. Simply connect your GitHub repository to V
 
 ### GitHub Pages
 The project also includes a GitHub Action in `.github/workflows/deploy.yml` for manual or automated deployment to GitHub Pages.
+
+## Contributors
+- [wimukthimadhavi55-afk](https://github.com/vimukthimadhavi55-afk) - Backend & DevOps
+- [sandu500](https://github.com/sandu500) - Frontend & Design
