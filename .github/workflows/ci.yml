@@ -11,10 +11,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    # Checkout the repository code
     - uses: actions/checkout@v4
+    # Validate the project structure
     - name: Validation
       run: |
-        echo "Validating project structure..."
+        # Step 1: Check if core HTML exists
         test -f src/index.html
+        # Step 2: Check if styles are present
         test -f src/styles/style.css
+        # Step 3: Check if main script is present
         test -f src/scripts/script.js
