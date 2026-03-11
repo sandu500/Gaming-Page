@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  web:
+    # Build using the Dockerfile in the current directory
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # Tag the resulting image
+    image: nexus-esports-landing:latest
+    container_name: nexus_frontend
+    # Map high-numbered port on host to the unprivileged container port
+    ports:
+      - "${HOST_PORT:-8080}:8080"
+    # Restart the container automatically unless explicitly stopped
+    restart: unless-stopped
+    # Use a custom bridge network to isolate the service
+    networks:
+      - frontend_network
+    # Resource limits to prevent performance degradation on the host
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 64M
+    # Application-level health monitoring
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:8080/ > /dev/null || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    # Ensure environment variables are passed through
+    environment:
+      - NODE_ENV=production
+
+# Custom network definition for enhanced security and isolation
+networks:
+  frontend_network:
+    driver: bridge
+    name: nexus_frontend_network
