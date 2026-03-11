@@ -1,0 +1,10 @@
+.git
+.github
+.vscode
+node_modules
+dist
+vercel.json
+README.md
+Dockerfile
+docker-compose.yml
+.env
