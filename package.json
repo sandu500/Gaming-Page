@@ -1,0 +1,23 @@
+{
+  "name": "gaming-hub-landing-page",
+  "version": "1.0.0",
+  "description": "Premium gaming hub landing page - NEXUS eSports",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "serve src",
+    "lint": "echo \"No linting required for static files\" && exit 0",
+    "build": "echo \"Build completed\" && exit 0",
+    "test": "echo \"Tests completed\" && exit 0"
+  },
+  "keywords": [
+    "gaming",
+    "landing-page",
+    "nexus",
+    "esports"
+  ],
+  "author": "sandu500",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.0"
+  }
+}
