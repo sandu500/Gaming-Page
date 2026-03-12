@@ -22,6 +22,10 @@ This project is optimized for Vercel. Simply connect your GitHub repository to V
 ### GitHub Pages
 The project also includes a GitHub Action in `.github/workflows/deploy.yml` for manual or automated deployment to GitHub Pages.
 
-## Contributors
+**Live Demo:** [https://sandu500.github.io/Gaming-Page/](https://sandu500.github.io/Gaming-Page/)
+
+## Contributors & Group Members
+- **Name 1** - Student ID 1
+- **Name 2** - Student ID 2
 - [wimukthimadhavi55-afk](https://github.com/vimukthimadhavi55-afk) - Backend & DevOps
 - [sandu500](https://github.com/sandu500) - Frontend & Design
